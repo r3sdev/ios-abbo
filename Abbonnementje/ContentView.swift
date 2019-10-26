@@ -11,7 +11,7 @@ import SwiftUI
 struct Subscription: Identifiable {
     let id: Int
     let name: String
-    let amount: String
+    let amount: Double
 }
 
 struct SubscriptionRow: View {
@@ -21,7 +21,7 @@ struct SubscriptionRow: View {
         HStack {
             Text(subscription.name).font(.headline)
             Spacer()
-            Text(subscription.amount)
+            Text(String(format: "€ %.02f", subscription.amount))
                 .font(.subheadline)
         }
     }
@@ -30,18 +30,20 @@ struct SubscriptionRow: View {
 struct ContentView: View {
     @State private var showDetails = false
 
-    @State private var subscriptions = [
+    @State var subscriptions = [
         Subscription(
             id: 1,
             name: "Internet",
-            amount: "10.00"
+            amount: 10.00
         )
     ]
     
+    
     var body: some View {
+        
         VStack {
             HStack {
-                Text("€ 10.00").font(.title)
+                Text(String(format: "€ %.02f", self.subscriptions.reduce(0, {$0 + $1.amount}))).font(.title)
                 Spacer()
                 Button(action: {
                     self.showDetails.toggle()
@@ -83,7 +85,7 @@ struct ContentView: View {
     func addSubscription() {
         subscriptions
             .append(
-                Subscription(id: 2, name: "test", amount: "11.0")
+                Subscription(id: 2, name: "test", amount: 11.0)
         )
     }
     /**
