@@ -10,12 +10,20 @@ import SwiftUI
 
 struct SubscriptionRow: View {
     var subscription: Subscription
-
+    
+    func amountAsString() -> String {
+        let numberFormatter = NumberFormatter()
+        numberFormatter.numberStyle = .currency
+        let formattedAmount = numberFormatter.string(from: subscription.amount as NSNumber)
+        
+        return "\(formattedAmount!)"
+    }
+    
     var body: some View {
         HStack {
             Text(subscription.name).font(.headline)
             Spacer()
-            Text(String(format: "€ %.02f", subscription.amount))
+            Text(amountAsString())
                 .font(.subheadline)
         }
     }
@@ -24,7 +32,7 @@ struct SubscriptionRow: View {
 struct SubscriptionRow_Previews: PreviewProvider {
     static var previews: some View {
         SubscriptionRow(subscription:
-            Subscription(name: "Preview", amount: 0.00)
+            Subscription(name: "Preview", amount: "0,00")
         )
     }
 }

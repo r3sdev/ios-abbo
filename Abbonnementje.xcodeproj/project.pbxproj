@@ -14,6 +14,7 @@
 		A96243C12366E6250027E232 /* Subscriptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A96243C02366E6250027E232 /* Subscriptions.swift */; };
 		A96243C32366EF390027E232 /* AddSubscription.swift in Sources */ = {isa = PBXBuildFile; fileRef = A96243C22366EF390027E232 /* AddSubscription.swift */; };
 		A96243C52366F22A0027E232 /* LabelTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A96243C42366F22A0027E232 /* LabelTextField.swift */; };
+		A9DB0B922367516900E9D2B6 /* LabelNumberField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9DB0B912367516900E9D2B6 /* LabelNumberField.swift */; };
 		A9F65C982360C63C0094DE65 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9F65C972360C63C0094DE65 /* AppDelegate.swift */; };
 		A9F65C9A2360C63C0094DE65 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9F65C992360C63C0094DE65 /* SceneDelegate.swift */; };
 		A9F65C9D2360C63C0094DE65 /* Abbonnementje.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A9F65C9B2360C63C0094DE65 /* Abbonnementje.xcdatamodeld */; };
@@ -50,6 +51,7 @@
 		A96243C02366E6250027E232 /* Subscriptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Subscriptions.swift; sourceTree = "<group>"; };
 		A96243C22366EF390027E232 /* AddSubscription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSubscription.swift; sourceTree = "<group>"; };
 		A96243C42366F22A0027E232 /* LabelTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelTextField.swift; sourceTree = "<group>"; };
+		A9DB0B912367516900E9D2B6 /* LabelNumberField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelNumberField.swift; sourceTree = "<group>"; };
 		A9F65C942360C63C0094DE65 /* Abbonnementje.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Abbonnementje.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9F65C972360C63C0094DE65 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A9F65C992360C63C0094DE65 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -104,6 +106,15 @@
 			path = Subscription;
 			sourceTree = "<group>";
 		};
+		A9DB0B932367517000E9D2B6 /* Fields */ = {
+			isa = PBXGroup;
+			children = (
+				A96243C42366F22A0027E232 /* LabelTextField.swift */,
+				A9DB0B912367516900E9D2B6 /* LabelNumberField.swift */,
+			);
+			path = Fields;
+			sourceTree = "<group>";
+		};
 		A9F65C8B2360C63C0094DE65 = {
 			isa = PBXGroup;
 			children = (
@@ -129,7 +140,7 @@
 			children = (
 				A9F65C972360C63C0094DE65 /* AppDelegate.swift */,
 				A9F65C992360C63C0094DE65 /* SceneDelegate.swift */,
-				A96243C42366F22A0027E232 /* LabelTextField.swift */,
+				A9DB0B932367517000E9D2B6 /* Fields */,
 				A9F65C9E2360C63C0094DE65 /* ContentView.swift */,
 				A96243BC2366C6260027E232 /* Header.swift */,
 				A96243BB2366C4E90027E232 /* Subscription */,
@@ -309,6 +320,7 @@
 				A96243BD2366C6260027E232 /* Header.swift in Sources */,
 				A9F65C9D2360C63C0094DE65 /* Abbonnementje.xcdatamodeld in Sources */,
 				A96243B82366C3F40027E232 /* Subscription.swift in Sources */,
+				A9DB0B922367516900E9D2B6 /* LabelNumberField.swift in Sources */,
 				A96243BA2366C4BA0027E232 /* SubscriptionRow.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

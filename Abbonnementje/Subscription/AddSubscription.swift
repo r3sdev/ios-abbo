@@ -18,8 +18,9 @@ struct AddSubscription: View {
         print("Adding \(self.name) \(self.amount)")
         
         if (self.name != "" && self.amount != "") {
-            subscriptions.add(name: self.name, amount: Double(self.amount) ?? 0.00)
+            subscriptions.add(name: self.name, amount: self.amount)
             clearInput();
+            close();
         }
         
     }
@@ -29,15 +30,32 @@ struct AddSubscription: View {
         self.amount = ""
     }
     
+    func close() {
+        subscriptions.show = false
+    }
+    
     var body: some View {
         
         VStack {
-            LabelTextField(label: "Name", placeholder: "Enter subscription name", value: $name)
-            LabelTextField(label: "Amount", placeholder: "Enter subscription amount", value: $amount)
+            LabelTextField(
+                label: "Name",
+                placeholder: "Enter subscription name",
+                value: $name
+            )
+            LabelNumberField(
+                label: "Amount",
+                placeholder: "Enter subscription amount",
+                value: $amount
+            )
+            HStack {
+                Button(action: add, label: {
+                    Text("Add")
+                })
+                Button(action: close, label: {
+                    Text("Cancel")
+                })
+            }
             Spacer()
-            Button(action: add, label: {
-                Text("Add")
-            })
         }
     }
 }

@@ -10,12 +10,13 @@ import SwiftUI
 
 final class Subscriptions: ObservableObject {
     @Published var data: [Subscription] = [];
-    @Published var new: Subscription = Subscription(name: "", amount: 0.00)
+    @Published var new: Subscription = Subscription(name: "", amount: "0,00")
+    @Published var show: Bool = false
     
     /**
      * Add subscription
      */
-    func add(name: String, amount: Double) {
+    func add(name: String, amount: String) {
         data.append(
             Subscription(name: name, amount: amount)
         )
@@ -26,4 +27,5 @@ final class Subscriptions: ObservableObject {
     func delete(at offsets: IndexSet) {
         data.remove(atOffsets: offsets)
     }
+    
 }
