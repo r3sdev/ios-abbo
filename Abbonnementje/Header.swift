@@ -16,19 +16,14 @@ struct Header: View {
     var body: some View {
         
         HStack {
+            Text("Total:")
+            Spacer()
             Text(String(
                 format: "€ %.02f",
                 subscriptions.data
                     .reduce(0, {$0 + $1.amount}))
             )
-                .font(.title)
-            Spacer()
-            Button(action: {
-                self.showDetails.toggle()
-            }) {
-                Image(systemName: "info")
-            }
-        }
+                .font(.title)        }
         .padding()
     }
 }

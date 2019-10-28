@@ -12,6 +12,8 @@
 		A96243BD2366C6260027E232 /* Header.swift in Sources */ = {isa = PBXBuildFile; fileRef = A96243BC2366C6260027E232 /* Header.swift */; };
 		A96243BF2366C9AA0027E232 /* SubscriptionList.swift in Sources */ = {isa = PBXBuildFile; fileRef = A96243BE2366C9AA0027E232 /* SubscriptionList.swift */; };
 		A96243C12366E6250027E232 /* Subscriptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A96243C02366E6250027E232 /* Subscriptions.swift */; };
+		A96243C32366EF390027E232 /* AddSubscription.swift in Sources */ = {isa = PBXBuildFile; fileRef = A96243C22366EF390027E232 /* AddSubscription.swift */; };
+		A96243C52366F22A0027E232 /* LabelTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A96243C42366F22A0027E232 /* LabelTextField.swift */; };
 		A9F65C982360C63C0094DE65 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9F65C972360C63C0094DE65 /* AppDelegate.swift */; };
 		A9F65C9A2360C63C0094DE65 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9F65C992360C63C0094DE65 /* SceneDelegate.swift */; };
 		A9F65C9D2360C63C0094DE65 /* Abbonnementje.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A9F65C9B2360C63C0094DE65 /* Abbonnementje.xcdatamodeld */; };
@@ -46,6 +48,8 @@
 		A96243BC2366C6260027E232 /* Header.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Header.swift; sourceTree = "<group>"; };
 		A96243BE2366C9AA0027E232 /* SubscriptionList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionList.swift; sourceTree = "<group>"; };
 		A96243C02366E6250027E232 /* Subscriptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Subscriptions.swift; sourceTree = "<group>"; };
+		A96243C22366EF390027E232 /* AddSubscription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSubscription.swift; sourceTree = "<group>"; };
+		A96243C42366F22A0027E232 /* LabelTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelTextField.swift; sourceTree = "<group>"; };
 		A9F65C942360C63C0094DE65 /* Abbonnementje.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Abbonnementje.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9F65C972360C63C0094DE65 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A9F65C992360C63C0094DE65 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -93,6 +97,7 @@
 			children = (
 				A96243B72366C3F40027E232 /* Subscription.swift */,
 				A96243C02366E6250027E232 /* Subscriptions.swift */,
+				A96243C22366EF390027E232 /* AddSubscription.swift */,
 				A96243BE2366C9AA0027E232 /* SubscriptionList.swift */,
 				A96243B92366C4BA0027E232 /* SubscriptionRow.swift */,
 			);
@@ -124,6 +129,7 @@
 			children = (
 				A9F65C972360C63C0094DE65 /* AppDelegate.swift */,
 				A9F65C992360C63C0094DE65 /* SceneDelegate.swift */,
+				A96243C42366F22A0027E232 /* LabelTextField.swift */,
 				A9F65C9E2360C63C0094DE65 /* ContentView.swift */,
 				A96243BC2366C6260027E232 /* Header.swift */,
 				A96243BB2366C4E90027E232 /* Subscription */,
@@ -293,11 +299,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A96243C32366EF390027E232 /* AddSubscription.swift in Sources */,
 				A96243C12366E6250027E232 /* Subscriptions.swift in Sources */,
 				A9F65C982360C63C0094DE65 /* AppDelegate.swift in Sources */,
 				A9F65C9A2360C63C0094DE65 /* SceneDelegate.swift in Sources */,
 				A96243BF2366C9AA0027E232 /* SubscriptionList.swift in Sources */,
 				A9F65C9F2360C63C0094DE65 /* ContentView.swift in Sources */,
+				A96243C52366F22A0027E232 /* LabelTextField.swift in Sources */,
 				A96243BD2366C6260027E232 /* Header.swift in Sources */,
 				A9F65C9D2360C63C0094DE65 /* Abbonnementje.xcdatamodeld in Sources */,
 				A96243B82366C3F40027E232 /* Subscription.swift in Sources */,

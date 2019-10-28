@@ -11,6 +11,7 @@ import SwiftUI
 struct ContentView: View {
     
     @EnvironmentObject var subscriptions: Subscriptions
+    @State var showAdd = false
     
     var body: some View {
         
@@ -18,13 +19,12 @@ struct ContentView: View {
 
             Header()
             SubscriptionList()
-
-            
-            Spacer()
-            
             HStack {
                 Spacer()
-                Button(action: subscriptions.add, label: {
+                Button(action: {
+//                    self.subscriptions.add(name: "Test", amount: 10.00)
+                    self.showAdd = !self.showAdd
+                }, label: {
                     Image(systemName: "plus")
                         .resizable()
                         .frame(width: 32.0, height: 32.0)
@@ -33,7 +33,10 @@ struct ContentView: View {
             }
             .padding()
         }
-    }    
+        .sheet(isPresented: $showAdd) {
+            AddSubscription(subscriptions: self.subscriptions)
+        }
+    }
 }
 
 struct ContentView_Previews: PreviewProvider {

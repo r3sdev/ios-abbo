@@ -21,7 +21,7 @@ struct SubscriptionList: View {
                     .onDelete(perform: subscriptions.delete)
                 }
             }
-            .navigationBarTitle(Text("Abbonnementjes"))
+            .navigationBarTitle(Text("Subscriptions"))
         }
     }
 }

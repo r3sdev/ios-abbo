@@ -9,16 +9,15 @@
 import SwiftUI
 
 final class Subscriptions: ObservableObject {
-    @Published var data: [Subscription] = [
-        Subscription(name: "test", amount: 1.00)
-    ];
+    @Published var data: [Subscription] = [];
+    @Published var new: Subscription = Subscription(name: "", amount: 0.00)
     
     /**
      * Add subscription
      */
-    func add() {
+    func add(name: String, amount: Double) {
         data.append(
-            Subscription(name: "test", amount: 11.0)
+            Subscription(name: name, amount: amount)
         )
     }
     /**
