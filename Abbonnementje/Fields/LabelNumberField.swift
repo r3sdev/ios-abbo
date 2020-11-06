@@ -20,10 +20,6 @@ struct LabelNumberField : View {
                 .font(.headline)
             TextField(placeholder, text: $value)
                 .padding(.all, 25)
-                .background(
-                    Color(red: 239.0/255.0, green: 243.0/255.0, blue: 244.0/255.0, opacity: 1.0)
-                        .cornerRadius(5.0)
-            )
                 .keyboardType(.decimalPad)
         }
         .padding(.all, 25)
